@@ -110,7 +110,6 @@ class DetailView(generic.DetailView):
         Excludes any questions that aren't published yet.
         """
         return Question.objects.filter(pub_date__lte=timezone.now())
-물론, 우리는 시간이 지난 pub_date 값을 가지고 있는 설문은 표시되고, 미래의 pub_date는 표시되지 않게 몇 가지 검사를 추가 할 것입니다.
 
 polls/tests.py¶
 class QuestionDetailViewTests(TestCase):
