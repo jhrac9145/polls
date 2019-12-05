@@ -111,7 +111,7 @@ class DetailView(generic.DetailView):
         """
         return Question.objects.filter(pub_date__lte=timezone.now())
 
-polls/tests.py¶
+polls/tests.py
 class QuestionDetailViewTests(TestCase):
     def test_future_question(self):
         """
